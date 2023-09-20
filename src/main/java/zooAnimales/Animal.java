@@ -22,7 +22,7 @@ public class Animal {
     public String movimiento () {
         return "desplazarse";
     }
-    public String totalPorTipo () {
+    public static String totalPorTipo () {
         return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: "
          + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + Anfibio.cantidadAnfibios();}
     public String toString () {
@@ -38,7 +38,7 @@ public class Animal {
     public static int getTotalAnimales () {
         return totalAnimales;
     }
-    public void setTotalAnimales (int totalAnimales) {
+    public static void setTotalAnimales (int totalAnimales) {
         Animal.totalAnimales = totalAnimales;
     }
     public String getNombre () {
