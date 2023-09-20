@@ -30,4 +30,34 @@ public class Reptil extends Animal{
         serpientes++;
         return new Reptil(nombre, edad, "jungla", genero, "blanco", 1);
 }
+public static List<Reptil> getListado () {
+    return Reptil.listado;
+}
+public static void setListado (List<Reptil> listado) {
+    Reptil.listado = listado;
+}
+public static int getIguanas () {
+    return Reptil.iguanas;
+}
+public static void setIguanas (int iguanas) {
+    Reptil.iguanas = iguanas;
+}
+public static int getSerpientes () {
+    return Reptil.serpientes;
+}
+public static void setSerpientes (int serpientes) {
+    Reptil.serpientes = serpientes;
+}
+public String getColorEscamas () {
+    return this.colorEscamas;
+}
+public void setColorEscamas (String colorEscamas) {
+    this.colorEscamas = colorEscamas;
+}
+public int getLargoCola () {
+    return this.largoCola;
+}
+public void setLargoCola (int largoCola) {
+    this.largoCola = largoCola;
+}
 }

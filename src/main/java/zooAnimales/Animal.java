@@ -9,9 +9,9 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private static List<Zona> zona = new ArrayList<>(1);
+    private List<Zona> zona = new ArrayList<>(1);
 
-    public Animal () {}
+    public Animal () {totalAnimales++;}
     public Animal (String nombre, int edad, String habitat, String genero) {
         totalAnimales++;
         this.nombre = nombre;
@@ -23,10 +23,52 @@ public class Animal {
         return "desplazarse";
     }
     public String totalPorTipo () {
-        return "Mamiferos: " + cantidadMamiferos + ;
-    }
+        return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: "
+         + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + Anfibio.cantidadAnfibios();}
     public String toString () {
-        return "Mi nombre es" + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " +
-        this.genero+ ", la zona en la que me ubico es " + this.zona + ", en el " + this.zoo
+        if (this.zona.equals(null)) {
+            return "Mi nombre es" + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " +
+        this.genero;
+        }
+        else {
+            return "Mi nombre es" + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " +
+        this.genero+ ", la zona en la que me ubico es " + this.zona.get(0).getNombre() + ", en el " + this.zona.get(0).getZoo().get(0);
+        }
+    }
+    public int getTotalAnimales () {
+        return totalAnimales;
+    }
+    public void setTotalAnimales (int totalAnimales) {
+        Animal.totalAnimales = totalAnimales;
+    }
+    public String getNombre () {
+        return this.nombre;
+    }
+    public void setNombre (String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad () {
+        return this.edad;
+    }
+    public void setEdad (int edad) {
+        this.edad = edad;
+    }
+    public String getHabitat () {
+        return this.habitat;
+    }
+    public void setHabitat (String habitat) {
+        this.habitat = habitat;
+    }
+    public String getGenero () {
+        return this.genero;
+    }
+    public void setGenero (String genero) {
+        this.genero = genero;
+    }
+    public List<Zona> getZona () {
+        return this.zona;
+    }
+    public void setZona (List<Zona> zona) {
+        this.zona = zona;
     }
 }

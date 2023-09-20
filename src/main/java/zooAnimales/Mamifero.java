@@ -15,6 +15,7 @@ public class Mamifero extends Animal{
         this.patas = patas;
         listado.add(this);
     }
+
     public static int cantidadMamiferos() {
         return listado.size();
     }
@@ -25,5 +26,35 @@ public class Mamifero extends Animal{
     public static Mamifero crearLeon (String nombre, int edad, String genero) {
         leones++;
         return new Mamifero(nombre, edad, "selva", genero, true, 4);
+    }
+    public static List<Mamifero> getListado () {
+        return Mamifero.listado;
+    }
+    public static void setListado (List<Mamifero> listado) {
+        Mamifero.listado = listado;
+    }
+    public static int getCaballos () {
+        return Mamifero.caballos;
+    }
+    public static void setCaballos (int caballos) {
+        Mamifero.caballos = caballos;
+    }
+    public static int getLeones () {
+        return Mamifero.leones;
+    }
+    public static void setLeones (int leones) {
+        Mamifero.leones = leones;
+    }
+    public boolean getPelaje () {
+        return this.pelaje;
+    }
+    public void setPelaje (boolean pelaje) {
+        this.pelaje = pelaje;
+    }
+    public int getPatas () {
+        return this.patas;
+    }
+    public void setPatas (int patas) {
+        this.patas = patas;
     }
 }
