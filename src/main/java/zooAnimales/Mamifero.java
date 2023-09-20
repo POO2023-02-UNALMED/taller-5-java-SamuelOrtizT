@@ -45,7 +45,7 @@ public class Mamifero extends Animal{
     public static void setLeones (int leones) {
         Mamifero.leones = leones;
     }
-    public boolean getPelaje () {
+    public boolean isPelaje () {
         return this.pelaje;
     }
     public void setPelaje (boolean pelaje) {

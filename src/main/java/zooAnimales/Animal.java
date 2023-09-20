@@ -35,7 +35,7 @@ public class Animal {
         this.genero+ ", la zona en la que me ubico es " + this.zona.get(0).getNombre() + ", en el " + this.zona.get(0).getZoo();
         }
     }
-    public int getTotalAnimales () {
+    public static int getTotalAnimales () {
         return totalAnimales;
     }
     public void setTotalAnimales (int totalAnimales) {
