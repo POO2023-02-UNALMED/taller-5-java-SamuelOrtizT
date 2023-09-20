@@ -32,7 +32,7 @@ public class Animal {
         }
         else {
             return "Mi nombre es" + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " +
-        this.genero+ ", la zona en la que me ubico es " + this.zona.get(0).getNombre() + ", en el " + this.zona.get(0).getZoo().get(0);
+        this.genero+ ", la zona en la que me ubico es " + this.zona.get(0).getNombre() + ", en el " + this.zona.get(0).getZoo();
         }
     }
     public int getTotalAnimales () {
