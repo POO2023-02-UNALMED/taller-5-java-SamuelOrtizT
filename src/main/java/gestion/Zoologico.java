@@ -34,10 +34,10 @@ public class Zoologico {
     public void setUbicacion (String ubicacion) {
         this.ubicacion = ubicacion;
     }
-    public List<Zona> getZonas () {
+    public List<Zona> getZona () {
         return this.zonas;
     }
-    public void setZonas (List<Zona> zonas) {
+    public void setZona (List<Zona> zonas) {
         this.zonas = zonas;
     }
 }

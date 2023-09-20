@@ -9,8 +9,9 @@ public class Zona {
     private List<Animal> animales;
 
     public Zona () {}
-    public Zona (String nombre) {
+    public Zona (String nombre, Zoologico zona) {
         this.nombre = nombre;
+        this.zoo.add(zona);
     }
 
     public void agregarAnimales (Animal animal1) {
