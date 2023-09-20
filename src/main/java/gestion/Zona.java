@@ -26,8 +26,8 @@ public class Zona {
     public void setNombre (String nombre) {
         this.nombre = nombre;
     }
-    public List<Zoologico> getZoo () {
-        return this.zoo;
+    public Zoologico getZoo () {
+        return this.zoo.get(0);
     }
     public void setZoo (List<Zoologico> zoo) {
         this.zoo = zoo;
