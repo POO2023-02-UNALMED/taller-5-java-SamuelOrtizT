@@ -1,6 +1,4 @@
 package zooAnimales;
-import java.util.List;
-import java.util.ArrayList;
 import gestion.Zona;
 
 public class Animal {
@@ -9,7 +7,7 @@ public class Animal {
     private int edad;
     private String habitat;
     private String genero;
-    private List<Zona> zona = new ArrayList<>(1);
+    private Zona zona;
 
     public Animal () {totalAnimales++;}
     public Animal (String nombre, int edad, String habitat, String genero) {
@@ -27,13 +25,13 @@ public class Animal {
          + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPeces() + "\nAnfibios: " + Anfibio.cantidadAnfibios();}
 
     public String toString () {
-        if (this.zona.get(0).equals(null)) {
+        if (this.zona == null) {
             return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " +
         this.genero;
         }
         else {
             return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " +
-        this.genero+ ", la zona en la que me ubico es " + this.zona.get(0).getNombre() + ", en el " + this.zona.get(0).getZoo();
+        this.genero+ ", la zona en la que me ubico es " + this.zona.getNombre() + ", en el " + this.zona.getZoo().getNombre();
         }
     }
     public static int getTotalAnimales () {
@@ -66,10 +64,10 @@ public class Animal {
     public void setGenero (String genero) {
         this.genero = genero;
     }
-    public List<Zona> getZona () {
+    public Zona getZona () {
         return this.zona;
     }
-    public void setZona (List<Zona> zona) {
+    public void setZona (Zona zona) {
         this.zona = zona;
     }
 }
